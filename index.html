@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gled</title>
+    <link rel="stylesheet" href="./src/css/swiper.css" />
     <link rel="stylesheet" href="./src/css/index.css" />
   </head>
   <body>
@@ -43,65 +44,67 @@
       </header>
       <main id="main" class="main">
         <div class="container">
-          <section id="areasOfWork" class="industries section">
-            <div class="industries__item industry">
-              <div class="industry__bg">
-                <img
-                  src="./src/assests/imgs/power-generation.png"
-                  alt="Power Generation"
-                />
+          <section id="areasOfWork" class="industries section swiper">
+            <div class="swiper-wrapper">
+              <div class="industries__item industry swiper-slide">
+                <div class="industry__bg">
+                  <img
+                    src="./src/assests/imgs/power-generation.png"
+                    alt="Power Generation"
+                  />
+                </div>
+                <div class="industry__description">
+                  <h2>Power Generation</h2>
+                  <p>
+                    GLED personnel have years of experience as a multiple
+                    service provider for Power Generation and especially Nuclear
+                  </p>
+                </div>
               </div>
-              <div class="industry__description">
-                <h2>Power Generation</h2>
-                <p>
-                  GLED personnel have years of experience as a multiple service
-                  provider for Power Generation and especially Nuclear
-                </p>
+              <div class="industries__item industry swiper-slide">
+                <div class="industry__bg">
+                  <img
+                    src="./src/assests/imgs/oil-and-gas.png"
+                    alt="Oil and Gas"
+                  />
+                </div>
+                <div class="industry__description">
+                  <h2>Oil and Gas</h2>
+                  <p>
+                    We provide equipment and services for oil and gas production
+                    refining and transportation
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="industries__item industry">
-              <div class="industry__bg">
-                <img
-                  src="./src/assests/imgs/oil-and-gas.png"
-                  alt="Oil and Gas"
-                />
+              <div class="industries__item industry swiper-slide">
+                <div class="industry__bg">
+                  <img
+                    src="./src/assests/imgs/cement-industry.png"
+                    alt="Cement Industry"
+                  />
+                </div>
+                <div class="industry__description">
+                  <h2>Cement Industry</h2>
+                  <p>
+                    We provide complete range of equipment, machinery and spare
+                    parts for cement industry
+                  </p>
+                </div>
               </div>
-              <div class="industry__description">
-                <h2>Oil and Gas</h2>
-                <p>
-                  We provide equipment and services for oil and gas production
-                  refining and transportation
-                </p>
-              </div>
-            </div>
-            <div class="industries__item industry">
-              <div class="industry__bg">
-                <img
-                  src="./src/assests/imgs/cement-industry.png"
-                  alt="Cement Industry"
-                />
-              </div>
-              <div class="industry__description">
-                <h2>Cement Industry</h2>
-                <p>
-                  We provide complete range of equipment, machinery and spare
-                  parts for cement industry
-                </p>
-              </div>
-            </div>
-            <div class="industries__item industry">
-              <div class="industry__bg">
-                <img
-                  src="./src/assests/imgs/steel-industry.png"
-                  alt="Steel Industry"
-                />
-              </div>
-              <div class="industry__description">
-                <h2>Steel Industry</h2>
-                <p>
-                  We are worldwide supplier of equipment and services for steel
-                  plants (melt shop and rolling mill)
-                </p>
+              <div class="industries__item industry swiper-slide">
+                <div class="industry__bg">
+                  <img
+                    src="./src/assests/imgs/steel-industry.png"
+                    alt="Steel Industry"
+                  />
+                </div>
+                <div class="industry__description">
+                  <h2>Steel Industry</h2>
+                  <p>
+                    We are worldwide supplier of equipment and services for
+                    steel plants (melt shop and rolling mill)
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -189,7 +192,7 @@
             id="productsAndSolutions"
             class="products-and-solutions section"
           >
-            <div class="products-and-solutions section__title">
+            <div class="products-and-solutions__title section__title">
               Products and solutions
             </div>
             <div class="products-and-solutions__inner">
@@ -251,5 +254,7 @@
         </div>
       </footer>
     </div>
+    <script src="./src/js/swiper.js"></script>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>

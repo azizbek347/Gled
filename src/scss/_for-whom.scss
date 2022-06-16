@@ -1,31 +1,81 @@
 .for-whom {
   position: relative;
-  padding: 60px 60px 100px;
+  padding: 20px 20px 40px;
   background: #1f1e44;
   border-radius: 40px;
   color: #ffffff;
   margin: 0 0 30px;
-  font: 400 normal 18px/32px 'Inter';
+  font: 400 normal 16px/32px 'Inter';
+  @include for-tablet-portrait-up {
+    padding: 30px 30px 60px;
+  }
+  @include for-tablet-landscape-up {
+    padding: 40px 40px 80px;
+    font-size: 17px;
+  }
+  @include for-desktop-up {
+    padding: 60px 60px 100px;
+    font-size: 18px;
+  }
 
   &__title {
-    margin: 0 0 124px;
+    margin: 0 0 40px;
+
+    @include for-tablet-portrait-up {
+      margin: 0 0 65px;
+    }
+    @include for-tablet-landscape-up {
+      margin: 0 0 90px;
+    }
+    @include for-desktop-up {
+      margin: 0 0 120px;
+    }
   }
 
   &__decor {
     position: absolute;
-    top: 364px;
+    display: none;
+    top: 130px;
     right: 60px;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     background-image: url(../assests/imgs/asterisk.png);
+    background-size: cover;
+
+    @include for-tablet-portrait-up {
+      display: block;
+      width: 60px;
+      height: 60px;
+    }
+    @include for-tablet-landscape-up {
+      top: 200px;
+      width: 80px;
+      height: 80px;
+    }
+    @include for-desktop-up {
+      top: 364px;
+      right: 60px;
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__inner {
   }
 
   &__heading {
-    margin: 0 0 60px;
+    margin: 0 0 30px;
     font-weight: 600;
+
+    @include for-tablet-portrait-up {
+      margin: 0 0 40px;
+    }
+    @include for-tablet-landscape-up {
+      margin: 0 0 50px;
+    }
+    @include for-desktop-up {
+      margin: 0 0 60px;
+    }
   }
 
   &__relation {
@@ -35,16 +85,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    margin: 0 auto 30px;
+    border-radius: 40px;
     transition: 0.4s ease;
     &:hover {
       border-radius: 10px;
     }
 
-    &s {
-      margin: 0 0 100px;
-      display: flex;
-      justify-content: space-between;
-    }
     &_a {
       border-radius: 70px;
     }
@@ -55,6 +103,52 @@
 
     &_c {
       border-radius: 100px;
+    }
+
+    &s {
+      margin: 0 0 40px;
+
+      @include for-tablet-portrait-up {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      @include for-tablet-landscape-up {
+      }
+      @include for-desktop-up {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      flex-basis: calc((100% - 90px) / 3);
+      max-height: 150px;
+      margin: 0 0 30px;
+
+      &_a,
+      &_c,
+      &_b {
+        border-radius: 40px;
+      }
+    }
+    @include for-tablet-landscape-up {
+    }
+    @include for-desktop-up {
+      flex-basis: calc((100% - 192px) / 5);
+      max-height: 200px;
+
+      &_a {
+        border-radius: 70px;
+      }
+
+      &_b {
+        border-radius: 40px;
+      }
+
+      &_c {
+        border-radius: 100px;
+      }
     }
   }
 

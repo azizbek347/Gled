@@ -17,7 +17,19 @@
     }
   }
   &__title {
-    font: 500 normal 140px/1.2 'Inter';
+    font: 500 normal 40px/1.2 'Inter';
+
+    @include for-tablet-portrait-up {
+      font-size: 60px;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 100px;
+    }
+    @include for-desktop-up {
+      font-size: 140px;
+    }
+    @include for-big-desktop-up {
+    }
   }
 }
 

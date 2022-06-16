@@ -1,11 +1,25 @@
+@import 'variables';
+@import 'mixins';
+
 @import 'fonts';
 @import 'reset';
 
 .container {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 15px;
+  @include for-phone-only {
+  }
+  @include for-tablet-portrait-up {
+  }
+  @include for-tablet-landscape-up {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  @include for-desktop-up {
+  }
+  @include for-big-desktop-up {
+  }
 }
 
 @import 'header';

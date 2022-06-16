@@ -1,34 +1,71 @@
 .about-us {
   position: relative;
-  padding: 60px 60px 100px;
+  padding: 20px 20px 40px;
   background: #f7f7f7;
   margin: 0 0 30px;
   border-radius: 40px;
-  font: 400 normal 18px/32px 'Inter';
+  font: 400 normal 16px/24px 'Inter';
+
+  @include for-tablet-portrait-up {
+    padding: 30px 30px 60px;
+    font-size: 17px;
+    line-height: 32px;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 18px;
+    padding: 40px 40px 80px;
+  }
+  @include for-desktop-up {
+    padding: 60px 60px 100px;
+  }
 
   &__decor {
     position: absolute;
-    top: 92px;
-    right: 60px;
-    width: 130px;
-    height: 130px;
+    top: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
     background-image: url('../assests/imgs/soft-star.png');
+    background-size: cover;
+
+    @include for-desktop-up {
+      top: 92px;
+      right: 60px;
+      width: 130px;
+      height: 130px;
+    }
   }
 
   &__inner {
+    margin: 40px 0 0;
+
+    @include for-tablet-landscape-up {
+      margin: 70px 0 0 auto;
+    }
+    @include for-desktop-up {
+      margin: 100px 0 0 auto;
+    }
   }
 
   &__statement {
     max-width: 724px;
     width: 100%;
-    margin: 100px 0 0 auto;
+    margin: 0 0 0 auto;
     p {
       margin: 20px 0 0;
     }
   }
 
   &__pros {
-    margin: 100px 0 0;
+    margin: 40px 0 0;
+
+    @include for-tablet-landscape-up {
+      margin: 70px 0 0;
+    }
+    @include for-desktop-up {
+      margin: 100px 0 0;
+    }
+
     h2 {
       margin: 0 0 24px;
       font-weight: 600;
