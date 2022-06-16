@@ -1,0 +1,69 @@
+.for-whom {
+  position: relative;
+  padding: 60px 60px 100px;
+  background: #1f1e44;
+  border-radius: 40px;
+  color: #ffffff;
+  margin: 0 0 30px;
+  font: 400 normal 18px/32px 'Inter';
+
+  &__title {
+    margin: 0 0 124px;
+  }
+
+  &__decor {
+    position: absolute;
+    top: 364px;
+    right: 60px;
+    width: 100px;
+    height: 100px;
+    background-image: url(../assests/imgs/asterisk.png);
+  }
+
+  &__inner {
+  }
+
+  &__heading {
+    margin: 0 0 60px;
+    font-weight: 600;
+  }
+
+  &__relation {
+    width: 210px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+    &:hover {
+      border-radius: 10px;
+    }
+
+    &s {
+      margin: 0 0 100px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &_a {
+      border-radius: 70px;
+    }
+
+    &_b {
+      border-radius: 40px;
+    }
+
+    &_c {
+      border-radius: 100px;
+    }
+  }
+
+  &__statement {
+    max-width: 724px;
+    width: 100%;
+    margin: 0 0 0 auto;
+    p {
+      margin: 20px 0 0;
+    }
+  }
+}

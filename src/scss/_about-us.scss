@@ -1,0 +1,40 @@
+.about-us {
+  position: relative;
+  padding: 60px 60px 100px;
+  background: #f7f7f7;
+  margin: 0 0 30px;
+  border-radius: 40px;
+  font: 400 normal 18px/32px 'Inter';
+
+  &__decor {
+    position: absolute;
+    top: 92px;
+    right: 60px;
+    width: 130px;
+    height: 130px;
+    background-image: url('../assests/imgs/soft-star.png');
+  }
+
+  &__inner {
+  }
+
+  &__statement {
+    max-width: 724px;
+    width: 100%;
+    margin: 100px 0 0 auto;
+    p {
+      margin: 20px 0 0;
+    }
+  }
+
+  &__pros {
+    margin: 100px 0 0;
+    h2 {
+      margin: 0 0 24px;
+      font-weight: 600;
+    }
+    ul {
+      list-style: disc inside;
+    }
+  }
+}

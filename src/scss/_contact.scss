@@ -1,0 +1,28 @@
+.contact {
+  border-radius: 40px;
+  background: #131313;
+  padding: 60px 60px 100px;
+  color: #ffffff;
+  &__link {
+    color: #2f80ed;
+    display: flex;
+    align-items: center;
+    transition: 0.4s ease color;
+
+    &:hover {
+      color: #6fcf97;
+    }
+
+    svg {
+      margin: 0 0 0 24px;
+      width: 46px;
+      height: 38px;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0 0;
+    font: 400 normal 56px/1.2 'Inter';
+  }
+}
