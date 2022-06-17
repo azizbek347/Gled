@@ -34,7 +34,7 @@
   @include flex(null, center, center);
 }
 
-@mixin overlay() {
+@mixin inset-0() {
   top: 0;
   left: 0;
   bottom: 0;

@@ -53,7 +53,7 @@
       height: 80px;
     }
     @include for-desktop-up {
-      top: 364px;
+      top: 264px;
       right: 60px;
       width: 100px;
       height: 100px;
@@ -79,13 +79,10 @@
   }
 
   &__relation {
-    width: 210px;
-    height: 200px;
+    position: relative;
+    max-width: 210px;
+    padding: 210px 0 0;
     background: rgba(255, 255, 255, 0.04);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     margin: 0 auto 30px;
     border-radius: 40px;
     transition: 0.4s ease;
@@ -123,7 +120,7 @@
 
     @include for-tablet-portrait-up {
       flex-basis: calc((100% - 90px) / 3);
-      max-height: 150px;
+      padding: calc((100% - 90px) / 3) 0 0;
       margin: 0 0 30px;
 
       &_a,
@@ -133,10 +130,13 @@
       }
     }
     @include for-tablet-landscape-up {
+      flex-basis: calc((100% - 150px) / 3);
+      padding: calc((100% - 150px) / 3) 0 0;
+      max-width: 260px;
     }
     @include for-desktop-up {
       flex-basis: calc((100% - 192px) / 5);
-      max-height: 200px;
+      padding: calc((100% - 192px) / 5) 0 0;
 
       &_a {
         border-radius: 70px;
@@ -149,6 +149,14 @@
       &_c {
         border-radius: 100px;
       }
+    }
+
+    div {
+      @include inset-0;
+      @include placeInCenter;
+
+      position: absolute;
+      text-align: center;
     }
   }
 
