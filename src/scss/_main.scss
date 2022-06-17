@@ -20,13 +20,13 @@
     font: 500 normal 40px/1.2 'Inter';
 
     @include for-tablet-portrait-up {
-      font-size: 60px;
+      font-size: 50px;
     }
     @include for-tablet-landscape-up {
-      font-size: 100px;
+      font-size: 70px;
     }
     @include for-desktop-up {
-      font-size: 140px;
+      font-size: 100px;
     }
   }
 }

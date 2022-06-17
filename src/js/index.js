@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     swiperInstance = new Swiper('.swiper', {
       loop: true,
       effect: 'fade',
+      autoplay: {
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
