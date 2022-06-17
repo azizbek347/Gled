@@ -1,5 +1,5 @@
 .header {
-//   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  //   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.5);
   border-radius: 16px;
   backdrop-filter: blur(12px);
@@ -9,6 +9,26 @@
   top: 0;
   left: 0;
   right: 0;
+
+  &__menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 24px;
+    height: 20px;
+    position: relative;
+    z-index: 10;
+
+    span {
+      width: 100%;
+      border: 1px solid;
+    }
+
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+  }
 
   &__inner {
     padding: 36px 0;
@@ -24,15 +44,45 @@
   }
 
   &__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: 0.4s ease transform;
+    padding: 100px 0 0;
+    background: #fff;
+
+    &_toggled {
+      transform: translateX(0%);
+    }
+
+    @include for-tablet-landscape-up {
+      position: static;
+      height: unset;
+      padding: 0;
+      transform: translateX(0%);
+      background: unset;
+    }
   }
 
   &__list {
     list-style: none;
-    display: flex;
+    padding: 0 15px;
+
+    @include for-tablet-landscape-up {
+      display: flex;
+      padding: unset;
+    }
   }
 
   &__list-item {
-    margin: 0 0 0 48px;
+    margin: 0 0 20px;
+
+    @include for-tablet-landscape-up {
+      margin: 0 0 0 48px;
+    }
   }
 
   &__link {

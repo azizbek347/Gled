@@ -1,24 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Dom loaded');
-  const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
-    // spaceBetween: '20',
+  let swiperInstance;
+  const breakpoint = window.matchMedia('(min-width:600px)');
+  const enbaleSwiper = () => {
+    swiperInstance = new Swiper('.swiper', {
+      loop: true,
+      effect: 'fade',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  };
+  const checkBreakpoint = () => {
+    if (!breakpoint.matches) swiperInstance?.destroy(true, true);
+    else enbaleSwiper();
+  };
+  breakpoint.addEventListener('change', checkBreakpoint);
+  checkBreakpoint();
 
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
+  // let menuOpened = false;
+  const headerNav = document.querySelector('.header__nav');
+  const menuBtn = document.getElementById('menu-btn');
 
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+  const toggle = () => {
+    // menuOpened = !menuOpened;
+    headerNav.classList.toggle('header__nav_toggled');
+  };
 
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+  menuBtn.addEventListener('click', toggle);
+
+  const linksList = document.querySelector('.header__list');
+  linksList.addEventListener('click', (e) => {
+    if (e.target.matches('.header__link')) {
+      toggle();
+    }
   });
 });
