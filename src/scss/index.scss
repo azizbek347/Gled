@@ -4,6 +4,10 @@
 @import 'fonts';
 @import 'reset';
 
+html{
+  scroll-padding-top: 104px;
+}
+
 .container {
   width: 100%;
   padding: 0 15px;

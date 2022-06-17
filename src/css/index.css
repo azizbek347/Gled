@@ -265,6 +265,10 @@ video {
   display: none;
 }
 
+html {
+  scroll-padding-top: 104px;
+}
+
 .container {
   width: 100%;
   padding: 0 15px;
@@ -280,7 +284,6 @@ video {
 
 .header {
   background: rgba(255, 255, 255, 0.5);
-  border-radius: 16px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   position: fixed;

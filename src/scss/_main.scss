@@ -2,6 +2,11 @@
   margin: 104px 0 0;
 }
 .section {
+  // scroll-margin-top: 120px;
+  // @include for-desktop-up {
+  //   scroll-margin-top: 104px;
+  // }
+
   &:last-child {
     position: relative;
     margin: 0 0 100px;
