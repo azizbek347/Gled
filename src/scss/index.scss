@@ -4,25 +4,21 @@
 @import 'fonts';
 @import 'reset';
 
-html{
-  scroll-padding-top: 104px;
+html {
+  scroll-padding-top: 72px;
+
+  @include for-desktop-up {
+    scroll-padding-top: 104px;
+  }
 }
 
 .container {
   width: 100%;
   padding: 0 15px;
-  @include for-phone-only {
-  }
-  @include for-tablet-portrait-up {
-  }
   @include for-tablet-landscape-up {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 40px;
-  }
-  @include for-desktop-up {
-  }
-  @include for-big-desktop-up {
   }
 }
 

@@ -2,7 +2,6 @@
   //   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   position: fixed;
   z-index: 10;
   top: 0;
@@ -30,11 +29,14 @@
   }
 
   &__inner {
-    padding: 36px 0;
-
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include for-desktop-up {
+      padding: 36px 0;
+    }
   }
 
   &__title {

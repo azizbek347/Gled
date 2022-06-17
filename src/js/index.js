@@ -22,15 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
   breakpoint.addEventListener('change', checkBreakpoint);
   checkBreakpoint();
 
-  // let menuOpened = false;
   const headerNav = document.querySelector('.header__nav');
   const menuBtn = document.getElementById('menu-btn');
 
   const toggle = () => {
-    // menuOpened = !menuOpened;
     headerNav.classList.toggle('header__nav_toggled');
   };
-
   menuBtn.addEventListener('click', toggle);
 
   const linksList = document.querySelector('.header__list');
